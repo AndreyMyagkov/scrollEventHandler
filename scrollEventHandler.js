@@ -37,4 +37,4 @@ const end = () => {
     console.log('end')
 }
 
-scrollStop(start, end);
+scrollEventHandler (start, end);
