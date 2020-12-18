@@ -7,24 +7,24 @@
  * 
  */
 const scrollEventHandler = (start, end) => {
-	if (!end || typeof end !== 'function') return;
-  if (!start || typeof start !== 'function') return;
-  
-	let isScrolling, started;
-  
-	window.addEventListener('scroll', () => {
-    if (isScrolling && !started) {
-      started = true
-      start();
-    }
-		window.clearTimeout(isScrolling);
+    if (!end || typeof end !== 'function') return;
+    if (!start || typeof start !== 'function') return;
 
-		isScrolling = setTimeout(() => {
-      started = false;
-			end();
-		}, 200);
+    let isScrolling, started;
 
-	}, false);
+    window.addEventListener('scroll', () => {
+        if (isScrolling && !started) {
+            started = true
+            start();
+        }
+        window.clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+            started = false;
+            end();
+        }, 200);
+
+    }, false);
 
 };
 
@@ -37,4 +37,4 @@ const end = () => {
     console.log('end')
 }
 
-scrollEventHandler (start, end);
+scrollEventHandler(start, end);
