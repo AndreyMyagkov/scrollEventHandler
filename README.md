@@ -1,4 +1,4 @@
-# scrollEventHandler
+# scrollEventHandler.js
 
 ## Scroll event listener
 
