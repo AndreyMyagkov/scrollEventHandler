@@ -13,6 +13,6 @@ const end = () => {
     console.log('end scrolling')
 }
 
-scrollStop(start, end);
+scrollEventHandler (start, end);
 
 ```
